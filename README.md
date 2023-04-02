@@ -8,8 +8,9 @@ Each model has its own directory, with the (possible) following files:
 
 | File             | Purpose                                    |
 |------------------|--------------------------------------------|
-| model_adapter.py | The `ModelAdapter` for the model           |
-| service.py       | A `ServiceRunner` of the model for FaaS    |
+| <name\>_model.py | The `MediapipeModel` wrapper for the model |
 | test.py          | A file to test out and play with the model |
 
-The file create_model.py is responsible for uploading and deploying any of the `ModelAdapter`s  
+The file model_adapter.py is contains the `ModelAdapter` that can call any of the `MediapipeModel`s according to configuration
+
+The file create_model.py is responsible for uploading and deploying the `ModelAdapter`  

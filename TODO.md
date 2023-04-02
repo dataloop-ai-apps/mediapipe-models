@@ -10,7 +10,3 @@
 | Pose                | Convert the group of `Point`s into a Pose Template. Will happen once [the ticket](https://support.dataloop.ai/support/tickets/5252) is resolved |
 | Selfie Segmentation | |
 
-### TODO create_model.py
-Add all models under one application. current problems:
-* Adding metadata for multiple modules
-* How to connect the entry point to the model
