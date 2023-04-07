@@ -4,7 +4,8 @@ This repository implements `ModelAdapter`s that uses pretrained models from Goog
 
 You can read more about MediaPipe's capabilities and models [here](https://google.github.io/mediapipe/)
 
-Each model has its own directory, with the (possible) following files:
+
+Each model has its own directory, with the following files:
 
 | File             | Purpose                                    |
 |------------------|--------------------------------------------|

@@ -1,12 +1,5 @@
 import dtlpy as dl
-import mediapipe as mp
-from face.face_model import FaceModel
-from face_mesh.face_mesh_model import FaceMeshModel
-from hands.hands_model import HandsModel
-from holistic.holistic_model import HolisticModel
-from objectron.objectron_model import ObjectronModel
-from pose.pose_model import PoseModel
-from selfie_seg.selfie_seg_model import SelfieSegmentationModel
+from models import models
 
 
 @dl.Package.decorators.module(name='model-adapter',
@@ -15,15 +8,6 @@ from selfie_seg.selfie_seg_model import SelfieSegmentationModel
 class MediapipeModelAdapter(dl.BaseModelAdapter):
     def load(self, local_path, **kwargs):
         print('loading model')
-        models = [
-            FaceModel,
-            FaceMeshModel,
-            HandsModel,
-            HolisticModel,
-            ObjectronModel,
-            PoseModel,
-            SelfieSegmentationModel
-        ]
         self.mp_model = None
         for model in models:
             if self.configuration["model_name"] == model.get_name():

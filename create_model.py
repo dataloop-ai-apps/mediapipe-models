@@ -3,18 +3,12 @@ import dtlpy as dl
 from typing import List, Type
 from mediapipe_model import MediapipeModel
 from model_adapter import MediapipeModelAdapter
-from face.face_model import FaceModel
-from face_mesh.face_mesh_model import FaceMeshModel
-from hands.hands_model import HandsModel
-from holistic.holistic_model import HolisticModel
-from objectron.objectron_model import ObjectronModel
-from pose.pose_model import PoseModel
-from selfie_seg.selfie_seg_model import SelfieSegmentationModel
+from models import models
 
 
-def upload_models(models: List[Type[MediapipeModel]]):
-    project = dl.projects.get(project_name='My First Project')
-    dataset = project.datasets.get(dataset_name='faces')
+def upload_models(project_name, dataset_name, mp_models: List[Type[MediapipeModel]]):
+    project = dl.projects.get(project_name=project_name)
+    dataset = project.datasets.get(dataset_name=dataset_name)
 
     codebase = project.codebases.pack(directory='./')
     metadata = dl.Package.get_ml_metadata(cls=MediapipeModelAdapter, default_configuration={})
@@ -35,7 +29,7 @@ def upload_models(models: List[Type[MediapipeModel]]):
                                                                         concurrency=1).to_json()},
                                     metadata=metadata)
 
-    for mp_model in models:
+    for mp_model in mp_models:
         model = package.models.create(model_name=f'mp-{mp_model.get_name()}-model',
                                       description=f'mediapipe {mp_model.get_name()} model',
                                       tags=['pretrained'],
@@ -56,16 +50,10 @@ def upload_models(models: List[Type[MediapipeModel]]):
 
 
 def main():
-    pass
-    upload_models([
-        FaceModel,
-        FaceMeshModel,
-        HandsModel,
-        HolisticModel,
-        ObjectronModel,
-        PoseModel,
-        SelfieSegmentationModel
-    ])
+    if dl.token_expired():
+        dl.login()
+    upload_models('My First Project', 'faces', mp_models=models)
+
 
 if __name__ == '__main__':
     main()
