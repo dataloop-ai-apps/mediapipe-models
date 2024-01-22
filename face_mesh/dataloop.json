@@ -3,6 +3,11 @@
   "displayName": "Media Pipe Face Mesh model",
   "version": "v0.0.1",
   "scope": "public",
+  "codebase": {
+    "type": "git",
+    "gitUrl": "https://github.com/dataloop-ai-apps/mediapipe-models.git",
+    "gitTag": "v0.0.1"
+  },
   "description": "Media Pipe Face Mesh model",
   "attributes": {
     "Provider": "Google",
