@@ -69,7 +69,7 @@
           "model_name": "face-mesh",
           "model_config": {
             "static_image_mode": true,
-            "max_num_face-meshs": 1,
+            "max_num_faces": 1,
             "refine_landmarks": true,
             "min_detection_confidence": 0.5
           }
