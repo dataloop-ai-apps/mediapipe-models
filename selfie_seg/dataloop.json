@@ -1,0 +1,82 @@
+{
+  "name": "mp-selfie-seg",
+  "displayName": "Media Pipe Selfie Segmentation model",
+  "version": "v0.0.1",
+  "scope": "public",
+  "description": "Media Pipe Selfie Segmentation model",
+  "attributes": {
+    "Provider": "Google",
+    "Category": "Model",
+    "License": "Apache 2.0",
+    "Media Type": "Image",
+    "Computer Vision": "Object Detection"
+  },
+
+  "components": {
+    "computeConfigs": [
+      {
+        "name": "media-pipe-selfie-seg-deploy",
+        "runtime": {
+          "podType": "regular-xs",
+          "concurrency": 1,
+          "runnerImage": "docker.io/yakirinven/mediapipe_image",
+          "autoscaler": {
+            "type": "rabbitmq",
+            "minReplicas": 0,
+            "maxReplicas": 2
+          }
+        }
+      }
+    ],
+    "modules": [
+      {
+        "name": "media-pipe-selfie-seg-module",
+        "entryPoint": "model_adapter.py",
+        "className": "MediapipeModelAdapter",
+        "computeConfig": "media-pipe-selfie-seg-deploy",
+        "description": "Media Pipe Selfie Segmentation Module",
+        "initInputs": [
+          {
+            "type": "Model",
+            "name": "model_entity"
+          }
+        ],
+        "functions": [
+          {
+            "name": "predict_items",
+            "input": [
+              {
+                "type": "Item[]",
+                "name": "items",
+                "description": "List of items to run inference on"
+              }
+            ],
+            "output": [],
+            "displayName": "Predict Items",
+            "displayIcon": "",
+            "description": "Media Pipe Selfie Segmentation API"
+          }
+        ]
+      }
+    ],
+    "models": [
+      {
+        "name": "media-pipe-selfie-seg",
+        "moduleName": "media-pipe-selfie-seg-module",
+        "scope": "project",
+        "status": "trained",
+        "configuration": {
+          "model_name": "selfie-seg",
+          "model_config": { "model_selection": 0 }
+        },
+        "description": "Media Pipe Selfie Segmentation model",
+        "supportedMethods": {
+          "load": true,
+          "predict": true,
+          "train": false,
+          "evaluate": false
+        }
+      }
+    ]
+  }
+}

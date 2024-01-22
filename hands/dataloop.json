@@ -1,0 +1,86 @@
+{
+  "name": "mp-hands",
+  "displayName": "Media Pipe Hands model",
+  "version": "v0.0.1",
+  "scope": "public",
+  "description": "Media Pipe Hands model",
+  "attributes": {
+    "Provider": "Google",
+    "Category": "Model",
+    "License": "Apache 2.0",
+    "Media Type": "Image",
+    "Computer Vision": "Object Detection"
+  },
+
+  "components": {
+    "computeConfigs": [
+      {
+        "name": "media-pipe-hands-deploy",
+        "runtime": {
+          "podType": "regular-xs",
+          "concurrency": 1,
+          "runnerImage": "docker.io/yakirinven/mediapipe_image",
+          "autoscaler": {
+            "type": "rabbitmq",
+            "minReplicas": 0,
+            "maxReplicas": 2
+          }
+        }
+      }
+    ],
+    "modules": [
+      {
+        "name": "media-pipe-hands-module",
+        "entryPoint": "model_adapter.py",
+        "className": "MediapipeModelAdapter",
+        "computeConfig": "media-pipe-hands-deploy",
+        "description": "Media Pipe Hands Module",
+        "initInputs": [
+          {
+            "type": "Model",
+            "name": "model_entity"
+          }
+        ],
+        "functions": [
+          {
+            "name": "predict_items",
+            "input": [
+              {
+                "type": "Item[]",
+                "name": "items",
+                "description": "List of items to run inference on"
+              }
+            ],
+            "output": [],
+            "displayName": "Predict Items",
+            "displayIcon": "",
+            "description": "Media Pipe Hands API"
+          }
+        ]
+      }
+    ],
+    "models": [
+      {
+        "name": "media-pipe-hands",
+        "moduleName": "media-pipe-hands-module",
+        "scope": "project",
+        "status": "trained",
+        "configuration": {
+          "model_name": "hands",
+          "model_config": {
+            "static_image_mode": true,
+            "max_num_hands": 2,
+            "min_detection_confidence": 0.5
+          }
+        },
+        "description": "Media Pipe Hands model",
+        "supportedMethods": {
+          "load": true,
+          "predict": true,
+          "train": false,
+          "evaluate": false
+        }
+      }
+    ]
+  }
+}
