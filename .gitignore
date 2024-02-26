@@ -1,0 +1,5 @@
+venv
+.dataloop
+.idea
+*.ipynb
+*__pycache__*
