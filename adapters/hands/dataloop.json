@@ -1,13 +1,13 @@
 {
   "name": "mp-hands",
   "displayName": "Media Pipe Hands model",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scope": "public",
   "description": "Media Pipe Hands model",
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/mediapipe-models.git",
-    "gitTag": "0.0.3"
+    "gitTag": "0.0.4"
   },
   "attributes": {
     "Provider": "Google",

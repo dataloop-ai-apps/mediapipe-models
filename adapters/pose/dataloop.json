@@ -1,13 +1,13 @@
 {
   "name": "mp-pose",
   "displayName": "Media Pipe Pose model",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scope": "public",
   "description": "Media Pipe Pose model",
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/mediapipe-models.git",
-    "gitTag": "0.0.3"
+    "gitTag": "0.0.4"
   },
   "attributes": {
     "Provider": "Google",

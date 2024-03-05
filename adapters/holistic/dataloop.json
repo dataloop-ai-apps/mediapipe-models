@@ -1,12 +1,12 @@
 {
   "name": "mp-holistic",
   "displayName": "Media Pipe Holistic model",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scope": "public",
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/mediapipe-models.git",
-    "gitTag": "0.0.3"
+    "gitTag": "0.0.4"
   },
   "description": "Media Pipe Holistic model",
   "attributes": {
