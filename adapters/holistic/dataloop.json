@@ -108,13 +108,7 @@
             "refine_face_landmarks": true
           }
         },
-        "description": "Media Pipe Holistic model",
-        "supportedMethods": {
-          "load": true,
-          "predict": true,
-          "train": false,
-          "evaluate": false
-        }
+        "description": "Media Pipe Holistic model"
       }
     ]
   }
