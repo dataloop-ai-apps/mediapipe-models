@@ -106,13 +106,7 @@
           "model_name": "selfie-seg",
           "model_config": { "model_selection": 0 }
         },
-        "description": "Media Pipe Selfie Segmentation model",
-        "supportedMethods": {
-          "load": true,
-          "predict": true,
-          "train": false,
-          "evaluate": false
-        }
+        "description": "Media Pipe Selfie Segmentation model"
       }
     ]
   }
