@@ -106,13 +106,7 @@
             "min_detection_confidence": 0.5
           }
         },
-        "description": "Media Pipe model for face detection",
-        "supportedMethods": {
-          "load": true,
-          "predict": true,
-          "train": false,
-          "evaluate": false
-        }
+        "description": "Media Pipe model for face detection"
       }
     ]
   }
