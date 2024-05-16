@@ -108,13 +108,7 @@
             "min_detection_confidence": 0.5
           }
         },
-        "description": "Media Pipe Pose model",
-        "supportedMethods": {
-          "load": true,
-          "predict": true,
-          "train": false,
-          "evaluate": false
-        }
+        "description": "Media Pipe Pose model"
       }
     ]
   }
