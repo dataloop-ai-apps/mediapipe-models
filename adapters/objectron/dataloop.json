@@ -108,13 +108,7 @@
             "model_name": "Shoe"
           }
         },
-        "description": "Media Pipe Objectron model",
-        "supportedMethods": {
-          "load": true,
-          "predict": true,
-          "train": false,
-          "evaluate": false
-        }
+        "description": "Media Pipe Objectron model"
       }
     ]
   }
