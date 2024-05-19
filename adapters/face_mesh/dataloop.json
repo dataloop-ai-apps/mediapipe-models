@@ -98,7 +98,7 @@
         "name": "media-pipe-face-mesh",
         "moduleName": "media-pipe-face-mesh-module",
         "scope": "project",
-        "status": "trained",
+        "status": "pre-trained",
         "configuration": {
           "model_name": "face-mesh",
           "model_config": {

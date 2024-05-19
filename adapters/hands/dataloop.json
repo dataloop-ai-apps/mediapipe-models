@@ -98,7 +98,7 @@
         "name": "media-pipe-hands",
         "moduleName": "media-pipe-hands-module",
         "scope": "project",
-        "status": "trained",
+        "status": "pre-trained",
         "configuration": {
           "model_name": "hands",
           "model_config": {

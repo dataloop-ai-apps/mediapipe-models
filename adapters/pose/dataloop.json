@@ -98,7 +98,7 @@
         "name": "media-pipe-pose",
         "moduleName": "media-pipe-pose-module",
         "scope": "project",
-        "status": "trained",
+        "status": "pre-trained",
         "configuration": {
           "model_name": "pose",
           "model_config": {

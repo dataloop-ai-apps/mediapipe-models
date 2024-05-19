@@ -101,7 +101,7 @@
         "name": "media-pipe-selfie-seg",
         "moduleName": "media-pipe-selfie-seg-module",
         "scope": "project",
-        "status": "trained",
+        "status": "pre-trained",
         "configuration": {
           "model_name": "selfie-seg",
           "model_config": { "model_selection": 0 }

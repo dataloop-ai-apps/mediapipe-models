@@ -98,7 +98,7 @@
         "name": "media-pipe-face",
         "moduleName": "media-pipe-face-module",
         "scope": "project",
-        "status": "trained",
+        "status": "pre-trained",
         "configuration": {
           "model_name": "face",
           "model_config": {

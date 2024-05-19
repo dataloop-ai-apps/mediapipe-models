@@ -98,7 +98,7 @@
         "name": "media-pipe-holistic",
         "moduleName": "media-pipe-holistic-module",
         "scope": "project",
-        "status": "trained",
+        "status": "pre-trained",
         "configuration": {
           "model_name": "holistic",
           "model_config": {
