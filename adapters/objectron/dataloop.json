@@ -1,12 +1,12 @@
 {
   "name": "mp-objectron",
   "displayName": "Media Pipe Objectron model",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scope": "public",
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/mediapipe-models.git",
-    "gitTag": "0.0.5"
+    "gitTag": "0.0.6"
   },
   "description": "Media Pipe Objectron model",
   "attributes": {
