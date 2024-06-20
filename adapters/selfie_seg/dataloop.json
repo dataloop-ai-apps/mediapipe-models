@@ -1,12 +1,12 @@
 {
   "name": "mp-selfie-seg",
   "displayName": "Media Pipe Selfie Segmentation model",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scope": "public",
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/mediapipe-models.git",
-    "gitTag": "0.0.6"
+    "gitTag": "0.0.7"
   },
   "description": "Media Pipe Selfie Segmentation model",
   "attributes": {
