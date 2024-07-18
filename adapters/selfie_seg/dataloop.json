@@ -13,8 +13,11 @@
     "Provider": "Google",
     "Category": "Model",
     "License": "Apache 2.0",
-    "Media Type": "Image",
-    "Computer Vision": "Object Detection"
+    "Media Type": [
+      "Image"
+    ],
+    "Computer Vision": "Object Detection",
+    "Deployed By": "Dataloop"
   },
   "components": {
     "computeConfigs": [
