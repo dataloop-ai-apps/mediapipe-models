@@ -37,7 +37,7 @@ pandas==1.5.3
 pathspec==0.11.0
 Pillow==9.4.0
 prompt-toolkit==3.0.38
-protobuf==3.20.3
+protobuf==4.25.8
 pydantic==1.10.5
 PyJWT==2.6.0
 pyparsing==3.0.9
