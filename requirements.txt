@@ -52,7 +52,7 @@ six==1.16.0
 tabulate==0.8.9
 tqdm==4.64.1
 typing_extensions==4.5.0
-urllib3==1.26.14
+urllib3==2.5.0
 validators==0.18.2
 wcwidth==0.2.6
 webvtt-py==0.4.3
