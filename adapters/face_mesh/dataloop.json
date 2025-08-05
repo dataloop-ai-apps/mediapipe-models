@@ -26,7 +26,7 @@
         "runtime": {
           "podType": "regular-xs",
           "concurrency": 1,
-          "runnerImage": "docker.io/yakirinven/mediapipe_image",
+          "runnerImage": "gcr.io/viewo-g/piper/agent/runner/apps/mediapipe-models:0.0.1",
           "autoscaler": {
             "type": "rabbitmq",
             "minReplicas": 0,
