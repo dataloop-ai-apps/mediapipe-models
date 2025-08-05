@@ -2,9 +2,6 @@ import dtlpy as dl
 from models import models
 
 
-@dl.Package.decorators.module(name='model-adapter',
-                              description='Model Adapter for MediaPipe models',
-                              init_inputs={'model_entity': dl.Model})
 class MediapipeModelAdapter(dl.BaseModelAdapter):
     def load(self, local_path, **kwargs):
         print('loading model')
