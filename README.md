@@ -1,4 +1,4 @@
-# MediaPipe Models for Dataloop
+# MediaPipe Models for DDOE
 
 This repository implements `ModelAdapter`s that uses pretrained models from Google's real time ML solution - MediaPipe.
 
@@ -23,7 +23,7 @@ The class should override all the abstract methods of `MediapipeModel`:
 |---|------------------|--------------------------------------------|---|
 |  | detect_img       | `model`: the model of Mediapipe's SDK. <br> `image`: image to preform inference on. | A list of dictionaries of the form {'annotation': dl.Annotation, 'score': float} of all annotations |
 | @property | model_cls          | - | the model class of Mediapipe's SDK. For example, `mp.solutions.face_detection.FaceDetection`|
-| @staticmethod | get_name          | - | A string that represent the model. Will appear in Dataloop in the full name of the model as "mp-<name\>-model" |
+| @staticmethod | get_name          | - | A string that represent the model. Will appear in DDOE in the full name of the model as "mp-<name\>-model" |
 | @staticmethod | get_default_model_configuration | - | A dictionary of the inputs for `model_cls`|
 | @staticmethod | get_labels | - | A list of strings for all the possible labels of the model |
 | @staticmethod | get_output_type | - | A `dl.AnnotationType` of the model. Must match the type that `detect_img` returns in `annotation`. |
@@ -41,5 +41,5 @@ In the file `create_model.py`, inside the `main` function, pass your project nam
  
 This will upload and deploy the `ModelAdapter` (defined in `model_adapter.py`) that can call any of the `MediapipeModel`s
 
-Run `create_model.py`, login to Dataloop if necessary, and you're good to go! check out your models under "Model Management"
+Run `create_model.py`, login to DDOE if necessary, and you're good to go! check out your models under "Model Management"
 and feel free to test them out under the "Test" tab.
